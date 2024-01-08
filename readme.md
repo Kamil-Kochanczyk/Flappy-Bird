@@ -1,5 +1,7 @@
 # Flappy Bird (pygame)
 
+![Screenshot](./screenshot.png)
+
 ## Wprowadzenie
 
 Flappy Bird to popularna gra typu *side-scrolling*, w której gracz wciela się w postać lecącego ptaka, którym musi omijać rury wystające z góry i z dołu ekranu. Jeżeli gracz przeleci ptakiem przez szparę między wystającymi rurami, to dostaje jeden punkt. Celem gry jest zdobycie jak największej liczby punktów. Gra się kończy, jeżeli ptak uderzy w jakąś rurę, albo jeżeli spadnie na ziemię.
@@ -33,7 +35,7 @@ W tym rozdziale zostanie wyjaśniony ogólny pomysł na wykonanie programu. Nie 
 - Ptak wcale nie porusza się w prawo, ptak porusza się tak naprawdę tylko w górę i w dół (w kierunku pionowym). To ziemia i rury poruszają się w lewo i sprawiają wrażenie, że to ptak porusza się w prawo.
 - W grze nie ma klasy reprezentującej pojedynczą rurę. W grze jest klasa reprezentująca pojedynczą szparę między rurami. Szpara ta to tak jakby pusty prostokąt, przez który może przelecieć ptak. Ma on szerokość taką samą jak szerokość rury i jakąś tam wysokość. Względem tej szpary można określić rury tworzące tę szparę. Szpara wyznacza więc jednoznacznie tak jakby kolumnę, która składa się z trzech elementów: ze szpary, z rury powyżej szpary i z rury poniżej szpary.
 - Kolumn pojawiających się przed ptakiem i przesuwających się w lewo przez ekran nie jest aż tak wiele. Są tak naprawdę tylko trzy. Poruszają się one cyklicznie, w kółko, przeskakują poza ekranem z lewej strony na prawą i sprawiają iluzję, że się pojawiają coraz to kolejne kolumny. Szczegóły poniżej.
-- Do zapisywania wyników do pliku postanowiono użyć formatu JSON. Szczegóły poniżej.
+- Do zapisywania wyników do pliku postanowiono użyć formatu JSON, serializacji i deserializacji. Szczegóły poniżej.
 - Zakłada się, że układ współrzędnych wyznacza lewy górny róg ekranu. Oś x jest skierowana w prawo, a oś y jest skierowana w dół.
 
 ### Ptak
@@ -80,7 +82,7 @@ while True:
         (...)
 ```
 
-Drugi przypadek jest wtedy, gdy $v_{0}=0$. Odpowiada to sytuacji, gdy ciało zaczyna od razu spadać swobodnie pod wpływem siły grawitacji, ponieważ nie ma żadnej prędkości początkowej. W grze sytuacja ta występuje tylko wtedy, gdy ptak w coś uderzy. Następuje wówczas koniec gry i ptak zaczyna spadać bezwładnie, aż nie uderzy w ziemię (naciskanie spacji wtedy nic nie robi). Logika jest taka sama jak w pierwszym przypadku, jedyna różnica jest taka, że tym razem $v_{0}=0$.
+Drugi przypadek jest wtedy, gdy $v_{0}=0$. Odpowiada to sytuacji, gdy ciało zaczyna od razu spadać swobodnie pod wpływem siły grawitacji, ponieważ nie ma żadnej prędkości początkowej. W grze sytuacja ta występuje tylko wtedy, gdy ptak w coś uderzy. Następuje wówczas koniec gry i ptak zaczyna spadać bezwładnie, aż uderzy w ziemię (naciskanie spacji podczas spadania nic nie robi). Logika jest taka sama jak w pierwszym przypadku, jedyna różnica jest taka, że tym razem $v_{0}=0$.
 
 ```python
 while True:
@@ -335,4 +337,4 @@ Możliwe jednak, że w grze wystąpi jeden mały problem, który pojawiał się 
 ## Źródła
 
 - oryginalna gra (inspiracja): https://flappybird.io/
-- obrazki: https://github.com/samuelcust/flappy-bird-assets
+- assets: https://github.com/samuelcust/flappy-bird-assets
