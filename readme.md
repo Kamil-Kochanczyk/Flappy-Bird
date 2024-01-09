@@ -4,7 +4,7 @@
 
 ## Uruchamianie
 
-Aby uruchomić grę można pobrać zawartość repozytorium jako archiwum zip, rozpakować je i następnie uruchomić program *flappy-bird.py*, np. za pomocą polecenia *python*. Aby program działał potrzebne są assety z folderu *assets*. Ze względu na to, że program odnosi się do nich za pomocą ścieżek relatywnych ("./assets/background.png", itp.), to zaleca się uruchamiać plik *flappy-bird.py* w tym folderze, w którym się ten plik znajduje i nie zmieniać struktury plików.
+Aby uruchomić grę można pobrać zawartość repozytorium jako archiwum zip, rozpakować je i następnie uruchomić program *flappy-bird.py*, np. za pomocą polecenia *python* albo *python3*. Aby program działał potrzebne są assety z folderu *assets*. Ze względu na to, że program odnosi się do nich za pomocą ścieżek relatywnych ("./assets/background.png", itp.), to zaleca się uruchamiać plik *flappy-bird.py* w tym folderze, w którym się ten plik znajduje i nie zmieniać struktury plików.
 
 ## Wprowadzenie
 
