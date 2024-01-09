@@ -2,6 +2,10 @@
 
 ![Screenshot](./screenshot.png)
 
+## Uruchamianie
+
+Aby uruchomić grę można pobrać zawartość repozytorium jako archiwum zip, rozpakować je i następnie uruchomić program *flappy-bird.py*, np. za pomocą polecenia *python*. Aby program działał potrzebne są assety z folderu *assets*. Ze względu na to, że program odnosi się do nich za pomocą ścieżek relatywnych ("./assets/background.png", itp.), to zaleca się uruchamiać plik *flappy-bird.py* w tym folderze, w którym się ten plik znajduje i nie zmieniać struktury plików.
+
 ## Wprowadzenie
 
 Flappy Bird to popularna gra typu *side-scrolling*, w której gracz wciela się w postać lecącego ptaka, którym musi omijać rury wystające z góry i z dołu ekranu. Jeżeli gracz przeleci ptakiem przez szparę między wystającymi rurami, to dostaje jeden punkt. Celem gry jest zdobycie jak największej liczby punktów. Gra się kończy, jeżeli ptak uderzy w jakąś rurę, albo jeżeli spadnie na ziemię.
